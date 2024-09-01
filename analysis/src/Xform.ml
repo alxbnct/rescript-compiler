@@ -265,7 +265,8 @@ module AddBracesToFn = struct
         when Loc.hasPos ~pos bodyExpr.pexp_loc
              && isBracedExpr bodyExpr = false
              && isFunction bodyExpr = false ->
-        bodyExpr.pexp_attributes <- bracesAttribute :: bodyExpr.pexp_attributes;
+        (* bodyExpr.pexp_attributes <- bracesAttribute :: bodyExpr.pexp_attributes; *)
+        ignore bracesAttribute;
         changed := !currentStructureItem
       | _ -> ());
       Ast_iterator.default_iterator.expr iterator e
