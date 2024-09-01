@@ -41,3 +41,14 @@
   (cppo
    (= 1.6.9))
   dune))
+
+(package
+ (name tools)
+ (synopsis "ReScript Tools")
+ (depends
+  (ocaml
+   (>= 4.10))
+  (cppo
+   (= 1.6.9))
+  analysis
+  dune))
